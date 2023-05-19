@@ -1,9 +1,5 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri = `mongodb+srv://${process.env.username || "urtheaman"}:${
-  process.env.password || "7279856900"
-}@cluster0.ltcbygp.mongodb.net/?retryWrites=true&w=majority`;
-
-console.log(uri);
+const uri = `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.ltcbygp.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
