@@ -1,6 +1,8 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const uri = `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.ltcbygp.mongodb.net/?retryWrites=true&w=majority`;
+require("dotenv").config();
 
+const uri = `mongodb+srv://${process.env.username}:${process.env.password}@cluster0.ltcbygp.mongodb.net/?retryWrites=true&w=majority`;
+console.log(uri);
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
